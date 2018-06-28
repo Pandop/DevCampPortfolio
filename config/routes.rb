@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  
+    
   root 'blogs#index'
-
+  
+  resources :portfolios
   resources :blogs
 
   get 'pages/home'
