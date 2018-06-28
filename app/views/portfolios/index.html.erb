@@ -4,5 +4,7 @@
   <h3><%= portofilio_item.title %></h3>
   <h4><%= portofilio_item.subtitle %></h4>
   <p><%= portofilio_item.body %></p>
-  <%= image_tag(portofilio_item.main_image) %>
+  <%= image_tag(portofilio_item.main_image) unless portofilio_item.thumb_image.nil? %>
 <% end %>
+
+
