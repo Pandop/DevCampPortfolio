@@ -27,8 +27,8 @@ puts "5 skill posts created."
     subtitle: "My great service",
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Labore a fugiat recusandae quas nam provident, officia cumque autem voluptatibus quis modi iusto similique. Eaque perspiciatis, asperiores possimus aperiam mollitia accusantium? 
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore a fugiat recusandae quas nam provident, officia cumque autem voluptatibus quis modi iusto similique. Eaque perspiciatis, asperiores possimus aperiam mollitia accusantium?",
-    main_image: "http://placeholder.it/600x400",
-    thumb_image: "http://placeholder.it/350x200"
+    main_image: "http://via.placeholder.com/600x200",
+    thumb_image: "http://via.placeholder.com/350x150"
   )
 end
 puts "9 portfolio posts created."
