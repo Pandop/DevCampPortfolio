@@ -11,6 +11,10 @@ class PortfoliosController < ApplicationController
     end    #render(layout: false)
   end
 
+  def show 
+    find_portfolio_item
+  end
+
   def new
     @portfolio_item = Portfolio.new
   end
