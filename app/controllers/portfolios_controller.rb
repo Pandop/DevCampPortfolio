@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
 
-  #before_action :find_portfolio_item, only: [:edit, :update, :destroy]
+  #before_action :find_portfolio_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @portfolio_items = Portfolio.all.order("created_at DESC")
@@ -36,6 +36,17 @@ class PortfoliosController < ApplicationController
 
   def edit
     find_portfolio_item
+  end
+
+  def destroy
+    find_portfolio_item 
+    @portfolio_item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(portfolios_path, notice: 'Record was removed.') }
+      format.json { head :no_content }
+      format.js
+    end 
   end
 
   def update 
