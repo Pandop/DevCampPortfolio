@@ -2,6 +2,9 @@ class Portfolio < ApplicationRecord
 
   has_many :technologies, dependent: :destroy
 
+  accepts_nested_attributes_for :technologies, 
+                                reject_if: lambda{ |attrs| attrs['name'].blank? }
+
   validates :title, presence: true, length: { minimum: 5 } 
 
   validates :body, presence: true
