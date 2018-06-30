@@ -3,4 +3,7 @@ class Blog < ApplicationRecord
   
   extend FriendlyId
   friendly_id :title, use: :slugged
+
+  validates :title, length: { minimum: 5 }
+  validates :body,  presence: true
 end
