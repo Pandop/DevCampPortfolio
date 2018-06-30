@@ -1,3 +1,9 @@
 <h1>Create a New Item </h1>
 
+<% if @portfolio_item.errors.any? %>
+  <h4 style="color: orange; ">
+    <%= @portfolio_item.errors.full_messages %>
+  </h4>
+<% end %>
+
 <%= render('form') %>

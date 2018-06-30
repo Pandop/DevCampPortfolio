@@ -1,16 +1,12 @@
-<h1>Porfolio Items</h1>
-
-<%# link_to("Create New Item", new_portfolio_path, subdomain: "my_url_path") %>
+<h1>Angular Portfolio Items </h1>
 
 <%= link_to("Create New Item", new_portfolio_path) %><br />
 
-<% @portfolio_items.each do |portfolio_item|%>
-  
+<% @angular_portfolio_items.each do |portfolio_item|%>
+  <%= link_to(image_tag(portfolio_item.thumb_image), portfolio_show_path(portfolio_item)) unless portfolio_item.thumb_image.nil? %>
   <h3><%= link_to(portfolio_item.title, portfolio_show_path(portfolio_item)) %></h3>
   <h4><%= portfolio_item.subtitle %></h4>
   <p><%= truncate(portfolio_item.body, length: 100) %></p>
-  <%= link_to(image_tag(portfolio_item.thumb_image), portfolio_show_path(portfolio_item)) unless portfolio_item.thumb_image.nil? %>
+  
   <p><%= link_to("show", portfolio_show_path(portfolio_item)) %></p>  
 <% end %>
-
-

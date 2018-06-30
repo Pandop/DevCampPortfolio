@@ -3,12 +3,19 @@ class PortfoliosController < ApplicationController
   #before_action :find_portfolio_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @portfolio_items = Portfolio.all.order("created_at DESC")
+    # @portfolio_items = Portfolio.all.order("created_at DESC")
+    # @portfolio_items = Portfolio.angular.sorted
+    # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items.sorted
+    @portfolio_items = Portfolio.all.sorted
     respond_to do |format|
       format.html       
       format.json { render(json: @portfolio_items) }
       format.js
     end    #render(layout: false)
+  end
+
+  def angular 
+    @angular_portfolio_items = Portfolio.angular.sorted
   end
 
   def show 
@@ -17,6 +24,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -72,7 +80,7 @@ class PortfoliosController < ApplicationController
       return @portfolio_item
     end
     def portfolio_params 
-      params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+      params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
     end
 
 end
