@@ -1,12 +1,13 @@
 class Blog < ApplicationRecord
+
+  belongs_to :topic
+
   enum status: { draft: 0, published: 1 }
   
   extend FriendlyId
   friendly_id :title, use: :slugged
 
   validates :title, length: { minimum: 5 }
-  validates :body,  presence: true
-
-  belongs_to :topic
+  validates :body,  presence: true  
   
 end

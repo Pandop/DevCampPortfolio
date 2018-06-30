@@ -1,12 +1,14 @@
 class Portfolio < ApplicationRecord
 
+  has_many :technologies, dependent: :destroy
+
   validates :title, presence: true, length: { minimum: 5 } 
 
   validates :body, presence: true
 
   validates :main_image, :thumb_image, presence: true
 
-  after_initialize :set_defaults
+  after_initialize :set_defaults  
 
   include Placeholder
 
