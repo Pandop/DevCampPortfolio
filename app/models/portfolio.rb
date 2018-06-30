@@ -1,5 +1,4 @@
 class Portfolio < ApplicationRecord
-
   has_many :technologies, dependent: :destroy
 
   accepts_nested_attributes_for :technologies, 
@@ -46,5 +45,4 @@ class Portfolio < ApplicationRecord
     # self.thumb_image ||= "http://via.placeholder.com/350x200"
     #end
   end
-
 end
