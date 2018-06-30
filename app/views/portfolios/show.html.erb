@@ -1,8 +1,13 @@
 <%= image_tag(@portfolio_item.main_image) unless @portfolio_item.main_image.nil? %>
+
 <h1><%= @portfolio_item.title %></h1>
 <em><%= @portfolio_item.subtitle %></em>
 <p><%=  @portfolio_item.body %></p>
-  
+
+<h2>Technologies Used:</h2>
+<% @portfolio_item.technologies.each do |t| %>
+  <p><%= t.name %></p>
+<% end %>
 
 <%#  <!--a href="/portfolios/<%= portfolio_item.id >"></a --> %>
  <p><%= link_to("Back", portfolios_path) %> 
