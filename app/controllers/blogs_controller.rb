@@ -4,13 +4,17 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
     #@blogs = Blog.all.limit(1)
+    #@blogs = Blog.all.includes(....)
+    @blogs = Blog.all
+    @page_title = "My Portfolio Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @page_title   = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
