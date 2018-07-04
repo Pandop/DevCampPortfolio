@@ -56,7 +56,7 @@ puts "9 portfolio posts created."
 
 3.times do |technology|
   Portfolio.last.technologies.create!(
-    name: "Technology#{tecnology}"
+    name: "Technology#{technology}"
   )
 end
 
