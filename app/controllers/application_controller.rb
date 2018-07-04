@@ -3,4 +3,10 @@ class ApplicationController < ActionController::Base
 
   include DeviseBlacklist
 
+  before_action :set_source 
+
+  def set_source 
+    return session[:source]= params[:q] if params[:q]
+  end
+
 end

@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2018_07_04_021605) do
     t.datetime "updated_at", null: false
     t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id"
   end
-  
+
   create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
