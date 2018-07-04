@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 2018_06_30_114227) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "blogs", "topics", on_delete: :cascade
-  add_foreign_key "technologies", "portfolios", on_delete: :cascade
-
+  add_foreign_key "blogs", "topics"
+  add_foreign_key "technologies", "portfolios"
 end
