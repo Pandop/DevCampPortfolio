@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Pandop/skel_view_tool_gem.git
+  revision: 807561659c56bbce49860b24b96ff86e54b5886e
+  specs:
+    skel_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -86,6 +92,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    duktape (2.0.1.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25-x64-mingw32)
@@ -217,6 +224,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.4, >= 4.4.3)
+  duktape
   friendly_id (~> 5.2, >= 5.2.4)
   jbuilder (~> 2.5)
   jquery-rails
@@ -225,6 +233,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  skel_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

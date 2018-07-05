@@ -18,6 +18,12 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator 
+    @copyright = SkelViewTool::Renderer.copyright("Stephen Kel", 
+                                                  "All rights reserved",
+                                                  "copyright-class")
+  end
+
 ##..........................................................................
   def sample_helper
     content_tag(:div, "My Content", class: "my-class")
