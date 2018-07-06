@@ -2,6 +2,6 @@
 
 <%# link_to("Create New Item", new_portfolio_path, subdomain: "my_url_path") %>
 
-<%= link_to("Create New Item", new_portfolio_path) %><br />
+<%= link_to("Create New Item", new_portfolio_path) if logged_in?(:site_admin) %><br />
 
 <%= render(partial: 'portfolio_item', collection: @portfolio_items) %>
