@@ -123,16 +123,21 @@ body {
  */
 
 .card {
-    min-height: 600px;
     margin-top: 30px;
+    min-height: max-content;
     .card-body {
-        background: white;
+        //background: white;
         color: black;
         text-align: left;
     }
-    .author-links a {
-        color: black;
-    }
+}
+
+.author-links a {
+    color: black;
+}
+
+.register-text {
+    text-align: right;
 }
 
 @mixin clearfix() {
