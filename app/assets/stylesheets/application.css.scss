@@ -140,10 +140,17 @@ body {
     text-align: right;
 }
 
-@mixin clearfix() {
-    &::after {
-        display: block;
-        content: "";
-        clear: both;
-    }
+.sign-up>.card {
+    margin-bottom: 6rem;
+}
+
+.login>.card {
+    margin: 0 auto;
+    width: 22rem;
+    float: none;
+    margin-bottom: 5rem;
+}
+
+.forgot-password>.card {
+    margin-bottom: 10rem;
 }
