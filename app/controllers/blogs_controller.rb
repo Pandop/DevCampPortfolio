@@ -10,7 +10,8 @@ class BlogsController < ApplicationController
   def index
     #@blogs = Blog.all.limit(1)
     #@blogs = Blog.all.includes(....)
-    @blogs = Blog.all
+    #@blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = "My Portfolio Blog"
   end
 

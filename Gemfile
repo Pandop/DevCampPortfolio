@@ -19,6 +19,8 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'skel_view_tool', '~> 0.1.1'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 #gem 'skel_view_tool', git: 'https://github.com/Pandop/skel_view_tool_gem'
 
