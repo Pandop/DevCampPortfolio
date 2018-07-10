@@ -31,6 +31,10 @@ class Portfolio < ApplicationRecord
     order("created_at DESC")
   end
 
+  def self.by_position 
+    order("position ASC")
+  end
+
   def set_defaults
     self.main_image  ||= Placeholder.generate_image(600, 400)
     self.thumb_image ||= Placeholder.generate_image(356, 280)

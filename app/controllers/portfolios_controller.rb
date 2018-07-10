@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
     # @portfolio_items = Portfolio.all.order("created_at DESC")
     # @portfolio_items = Portfolio.angular.sorted
     # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items.sorted
-    @portfolio_items = Portfolio.all.sorted
+    @portfolio_items = Portfolio.by_position 
     respond_to do |format|
       format.html       
       format.json { render(json: @portfolio_items) }
