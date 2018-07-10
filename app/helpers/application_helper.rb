@@ -48,20 +48,19 @@ module ApplicationHelper
 
   def nav_helper(style, tag_type='')
     nav_links = ''
+
     nav_items.each do |item|
       nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? (item[:url])}'>#{item[:title]}</a></#{tag_type}>"
     end
-#nav_links = <<NAV
-#{tag_type}><a href="#{root_path}" class="#{style} #{active? (root_path)}">Home</a></#{tag_type}>
-#NAV
     return nav_links.html_safe
-  end
-
-  def active? (path)
-    return "active" if current_page?(path)
   end
 ##..........................................................................
   def sample_helper
     content_tag(:div, "My Content", class: "my-class")
+  end
+
+  private
+  def active? (path)
+    return "active" if current_page?(path)
   end
 end
