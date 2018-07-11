@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
 
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   #before_action :find_portfolio_item, only: [:show, :edit, :update, :destroy]
 
@@ -10,12 +10,19 @@ class PortfoliosController < ApplicationController
     # @portfolio_items = Portfolio.all.order("created_at DESC")
     # @portfolio_items = Portfolio.angular.sorted
     # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items.sorted
-    @portfolio_items = Portfolio.all.sorted
+    @portfolio_items = Portfolio.by_position 
     respond_to do |format|
       format.html       
       format.json { render(json: @portfolio_items) }
       format.js
     end    #render(layout: false)
+  end
+
+  def sort 
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    render body: nil
   end
 
   def angular 

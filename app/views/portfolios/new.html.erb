@@ -1,10 +1,6 @@
-<h1>Create a New Item </h1>
+<div class="container portfolio-form">
+  <h1>Create a New Item </h1>
+  <%# <%= render('form') > %>
+  <%= render('form', portfolio_item: @portfolio_item) %>
+</div>
 
-<% if @portfolio_item.errors.any? %>
-  <h4 style="color: orange; ">
-    <%= @portfolio_item.errors.full_messages %>
-  </h4>
-<% end %>
-
-<%# <%= render('form') > %>
-<%= render('form', portfolio_item: @portfolio_item) %>
