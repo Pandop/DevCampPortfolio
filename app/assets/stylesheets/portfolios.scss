@@ -79,7 +79,12 @@ footer p {
 * Custom styles
 **/
 
-.portfolio-form {
-    padding: 5px;
+.portfolio-container {
+    padding-top: 30px;
     //background: yellow;
+}
+
+.portfolio-item-border {
+    margin: 0 auto;
+    border: 1px dotted #e6e0e0
 }
