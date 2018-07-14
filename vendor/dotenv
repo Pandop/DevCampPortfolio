@@ -1,0 +1,18 @@
+
+TWITTER_CONSUMER_KEY    = Yzeo3WonxqHQSGCL3qlZ7fY3j
+TWITTER_CONSUMER_SECRET = dXX0eQqboMK6HW0vFPUM4CKScZI7NhFpN2Gq9ytEUnaiOiO2b2
+TWITTER_ACCESS_TOKEN    = 715346753914949632-noeG7LYB0UC46GNG0nLznGAsedjwnyx
+TWITTER_ACCESS_SECRET   = 7LkQIkmpxHv1hv3Oxzfa52oR6Wa5wSjgBovc1lzrBfIyZ
+
+development:
+  twitter:
+    TWITTER_CONSUMER_KEY:    "Yzeo3WonxqHQSGCL3qlZ7fY3j"
+    TWITTER_CONSUMER_SECRET: "dXX0eQqboMK6HW0vFPUM4CKScZI7NhFpN2Gq9ytEUnaiOiO2b2"
+    TWITTER_ACCESS_TOKEN:    "715346753914949632-noeG7LYB0UC46GNG0nLznGAsedjwnyx"
+    TWITTER_ACCESS_SECRET:   "7LkQIkmpxHv1hv3Oxzfa52oR6Wa5wSjgBovc1lzrBfIyZ"
+
+      config.consumer_key        = "TWITTER_CONSUMER_KEY"
+      config.consumer_secret     = "TWITTER_CONSUMER_SECRET"
+      config.access_token        = "TWITTER_ACCESS_TOKEN"
+      config.access_token_secret = "TWITTER_ACCESS_SECRET"    
+

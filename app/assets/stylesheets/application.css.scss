@@ -48,7 +48,7 @@ body {
 }
 
 .cover-container {
-    max-width: 55em;
+    max-width: 65em;
 }
 
 
@@ -191,4 +191,17 @@ body {
 
 .copyright-class {
     color: #fff;
+}
+
+.tech-news {
+    color: #000;
+    margin: 10px;
+}
+
+.tech-news a {
+    color: green;
+}
+
+.tech-news>.card {
+    padding: 20px;
 }
