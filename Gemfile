@@ -28,6 +28,7 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.5'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.2'
 
 #gem 'skel_view_tool', git: 'https://github.com/Pandop/skel_view_tool_gem'
 
