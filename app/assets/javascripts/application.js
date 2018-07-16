@@ -20,5 +20,6 @@
 //= require gritter
 //= portfolios
 //= require activestorage
+//= require cable
 //= require turbolinks
 //= require_tree .

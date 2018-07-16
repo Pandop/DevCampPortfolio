@@ -3,12 +3,15 @@
   <p class="blog-post-meta">Published 
     <%= time_ago_in_words(blog.created_at) %> ago</p>
 
-    <% if logged_in?(:site_admin) %>
-      <p class="blog-post-meta">
-      <%=link_to(blog.status, toggle_status_blog_path(blog)) %> / 
-      <%=link_to('Edit',edit_blog_path(blog))%> / 
-      <%=link_to('Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?'})%>
-    </p>
-    <% end %> 
-  <p><%= blog.body %></p>  
+  <% if logged_in?(:site_admin) %>
+    <p class="blog-post-meta">
+    <%=link_to(blog.status, toggle_status_blog_path(blog)) %> / 
+    <%=link_to('Edit',edit_blog_path(blog))%> / 
+    <%=link_to('Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?'})%>
+  </p>
+  <% end %> 
+  <p>
+    <%= truncate(blog.body,length: 200, escape: false) %>
+    <%= link_to('Continue reading', blog) %>
+  </p>  
 </div><!-- /.blog-post -->
