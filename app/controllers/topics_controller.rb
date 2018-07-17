@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :set_sidebar_topics
+  before_action :set_sidebar_topics #, except: [:update, :create, :destroy, :toggle_status]
   layout 'blog'
 
   def index
