@@ -8,7 +8,24 @@
       </div>
       <div class="col-md-4">    
         <%= image_tag('profile.png', width:300, alt: 'profile image', class: 'profile-img') %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h6><%= skill.title %></h6>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning"
+                  rol="progressbar"
+                  aria-valuenow="<%= skill.percent_completed %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_completed %>%"              
+                  >
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
+
       <div class="col-md-8 aboutme-param">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore a fugiat recusandae quas nam provident, officia cumque autem voluptatibus quis modi iusto similique. Eaque perspiciatis, asperiores possimus aperiam mollitia accusantium?</p>
 
