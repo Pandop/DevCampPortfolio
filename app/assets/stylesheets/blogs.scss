@@ -5,6 +5,16 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
+@font-face {
+    font-family: 'Lato';
+    src: font-url('Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: font-url('Roboto-Regular.ttf');
+}
+
 
 /*
  * Globals
@@ -17,7 +27,7 @@
 }
 
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Lato', sans-serif;
     color: #555;
 }
 
@@ -33,7 +43,7 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: normal;
     color: #333;
 }
@@ -219,3 +229,28 @@ h6,
 .comment-name {
     font-weight: 700;
 }
+
+table.CodeRay {
+    //margin: 0 auto;
+    background: #f2f6fa;
+}
+
+.blogcrum a {
+    font-size: 1.25em;
+    margin: 0 10px 0 10px;
+}
+
+.blog-nav {
+    margin-bottom: 30px;
+    //background: rgb(199, 198, 198);
+}
+
+.blog-sidebar-source {
+    margin-top: 20px;
+}
+
+
+/* Creates the triangle at the beginning (left side) of the right box  */
+
+
+/* This triangle needs to match the background the breadcrumb sits on. Solid colors work best. */

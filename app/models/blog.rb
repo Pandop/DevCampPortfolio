@@ -7,7 +7,9 @@ class Blog < ApplicationRecord
 
   validates :title, length: { minimum: 5 }
   
-  validates :body,  presence: true  
+  validates :body,  presence: true
+
+  validates :topic_id, presence: true  
   
   belongs_to :topic
 

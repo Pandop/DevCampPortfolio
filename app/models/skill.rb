@@ -6,7 +6,7 @@ class Skill < ApplicationRecord
 
   validates :percent_completed, presence: true
 
-  after_initialize :set_defaults
+  #after_initialize :set_defaults
 
   #def set_defaults
     #self.badge  ||= Placeholder.generate_image(250, 250)
