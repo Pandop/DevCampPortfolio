@@ -7,17 +7,17 @@
 @import "gritter";
 @font-face {
     font-family: 'Lato';
-    src: font-url('Lato-Regular.ttf');
+    src: font-url('Lato/Lato-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Roboto Slab';
-    src: font-url('Roboto-Regular.ttf');
+    src: font-url('Roboto/Roboto-Regular.ttf');
 }
 
 body {
     min-height: 50rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     /* Can be removed; just added for demo purposes */
 }
 
@@ -33,7 +33,7 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', serif;
 }
 
 .navbar-toggler-icon {
