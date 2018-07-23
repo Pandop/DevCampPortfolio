@@ -11,6 +11,7 @@ class PortfoliosController < ApplicationController
     # @portfolio_items = Portfolio.angular.sorted
     # @portfolio_items = Portfolio.ruby_on_rails_portfolio_items.sorted
     @portfolio_items = Portfolio.by_position 
+    #byebug
     respond_to do |format|
       format.html       
       format.json { render(json: @portfolio_items) }
@@ -40,6 +41,7 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
+     #byebug
     respond_to do |format|
       if @portfolio_item.save
         format.html {redirect_to(portfolios_path, notice: "Your post is now live.")}
@@ -71,7 +73,9 @@ class PortfoliosController < ApplicationController
   def update 
     find_portfolio_item
     respond_to do |format|
+      #byebug
       if @portfolio_item.update_attributes(portfolio_params)
+        
         format.html { redirect_to(portfolios_path, notice: 'Blog was successfully updated.') }
 
         format.json {render(:show, status: :ok, location: @portfolio_item)}
