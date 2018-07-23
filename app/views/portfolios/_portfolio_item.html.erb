@@ -3,8 +3,12 @@
     <div class="portfolio-item-border">    
       <%= link_to(
           image_tag("#{portfolio_img(portfolio_item.thumb_image,'thumb')}" ,width: '100%'), 
-          portfolio_show_path(portfolio_item)
-          ) %>  
+          portfolio_show_path(portfolio_item)          
+          ) 
+          #portfolio_img(portfolio_item.thumb_image,'thumb')
+          #image_tag("#{portfolio_img(portfolio_item.thumb_image,'thumb')}" ,width: '100%') #, 
+          #portfolio_show_path(portfolio_item))
+          %>  
     </div>  
     
     <p class="card-text">
